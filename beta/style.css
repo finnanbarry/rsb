@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: #F3F5F6;
+}
+::selection {
+  background: #F3F5F6;
+}
+body{
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: #E2E2E2;
+  font-size: 92px;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+.box {
+  position: relative;
+  overflow: scroll;
+  padding: 0 30px 0 30px;
+  width: calc(50% - 7.5px);
+  height: 100%;
+  float: left;
+  max-width: 90%;
+}
+.clicker{
+  display: inline-block;
+  cursor: pointer;
+}
+.clear_block{
+  clear: both;
+}
+.left_box{
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+}
+.right_box{
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+  margin-left: 15px;
+}
+.drag-container{
+  width: 74%;
+  height: 100%;
+  margin-left: 13%;
+  position: fixed;
+}
+.centre-drag{
+  height: 100%;
+  width: 15px;
+  background: url("./content/assets/grip.png") center center no-repeat #E2E2E2;
+  cursor: ew-resize;
+  float: left;
+  transform: translateX(-7.5px);
+  left: 50%;
+  z-index: 100;
+}
+.indicate{
+  z-index: 200;
+  position: fixed;
+  display: inline-block;
+  color: #000;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  display: none;
+}
+.arrow-right{
+  left: calc(50% + 80px);
+}
+.arrow-left{
+  left: calc(50% - 80px);
+}
+.l_intro_box, .r_intro_box{
+  height: 85%;
+}
+.hidden-title-l{
+  display: none;
+  position: fixed;
+  transform: rotate(-90deg) translateX(30px);
+  top: 50%;
+  left: 40px;
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+  z-index: 100;
+}
+.hidden-title-r{
+  display: none;
+  position: fixed;
+  transform: rotate(90deg) translateX(-20px);
+  top: 50%;
+  right: 40px;
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+  z-index: 100;
+}
+.b_intro{
+  margin: 40px 0 0 0;
+}
+.m20{
+  margin: 0 0 54px 0;
+}
+.link_reg{
+  text-decoration: underline;
+}
+.link_reg:hover{
+  text-decoration: none;
+}
+.link_irr{
+  display: inline-block;
+}
+.link_irr:hover{
+  text-decoration: underline;
+}
+.info_extra_l, .info_extra_r{
+  display: inline-block;
+  display: none;
+}
+.info_extra{
+  display: inline-block;
+  display: none;
+}
+#info_extra_l_switch, .info_extra_r_switch{
+  cursor: pointer;
+  display: inline-block;
+}
+#mobile_container {
+  overflow: visible;
+  position: static;
+  height: auto;
+}
+.ui-loader{
+  display: none;
+}
+
+/*  CONTENT  */
+
+
+.content_box{
+  margin: 0 0 100px 0;
+}
+.right_content{
+  height: 1000px;
+}
+.r_img{
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+#loading{
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  font-family: 'Grot';
+  text-align: center;
+  background: #E2E2E2;
+  font-size: 0.5em;
+  position: fixed;
+}
+#loading p {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  margin: 0 auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+/*  FONT  */
+
+@font-face {
+  font-family: 'Grot';
+  src: url('./webfonts/315D57_0_0.ttf')  format('truetype'),
+       url('./webfonts/315D57_0_0.woff') format('woff'),
+       url('./webfonts/315D57_0_0.woff2') format('woff2'),
+       url('./webfonts/315D57_0_0.eot') format('embedded-opentype');
+}
+
+
+/*  MOBILE  */
+
+@media screen and (max-height: 700px) {
+
+  .l_intro_box, .r_intro_box{
+    margin-bottom: 30%;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+    body {
+      font-size: 42px;
+    }
+
+    #mobile_container {
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .drag-container{
+      display: none;
+    }
+
+    .right_box {
+      position: absolute;
+      width: 90%;
+      right: 0%;
+    }
+
+    .left_box {
+      position: absolute;
+      width: 90%;
+      left: -80%;
+    }
+
+    .l_intro_box, .r_intro_box{
+      margin-top: 30px;
+      margin-bottom: 30%;
+      height: auto;
+    }
+
+    .m20 {
+      margin: 0 0 24px 0;
+    }
+
+    .box{
+      padding: 0 20px;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    body { font-size: 82px; }
+}
+
+@media screen and (max-width: 1240px) {
+    body { font-size: 72px; }
+}
+
+@media screen and (max-width: 1100px) {
+    body { font-size: 62px; }
+}
+
+@media screen and (max-width: 980px) {
+    body { font-size: 52px; }
+}
+
+@media screen and (max-width: 700px) {
+    body { font-size: 38px; }
+}
+
+@media screen and (max-width: 550px) {
+    body { font-size: 34px; }
+}

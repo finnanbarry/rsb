@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: #F3F5F6;
+}
+::selection {
+  background: #F3F5F6;
+}
+body{
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: #E2E2E2;
+  font-size: 92px;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+.box {
+  position: relative;
+  overflow: scroll;
+  padding: 0 30px 0 30px;
+  width: calc(50% - 7.5px);
+  height: 100%;
+  float: left;
+  max-width: 90%;
+}
+.box img{
+  /*float: left;*/
+}
+.clicker{
+  display: inline-block;
+  cursor: pointer;
+}
+.clear_block{
+  clear: both;
+}
+.left_box{
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+}
+.right_box{
+  font-family: 'Grot', Arial;
+  font-size: 0.5em;
+  margin-left: 15px;
+}
+.drag-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.centre-drag{
+  height: 100%;
+  width: 15px;
+  background: url("./content/assets/grip.png") center center no-repeat #E2E2E2;
+  cursor: ew-resize;
+  float: left;
+  transform: translateX(-7.5px);
+  left: 50%;
+  z-index: 100;
+}
+.indicate{
+  z-index: 200;
+  position: fixed;
+  display: inline-block;
+  color: #000;
+  transform: translateX(-50%);
+  top: 42%;
+  display: none;
+}
+.arrow-right{
+  left: calc(50% + 80px);
+}
+.arrow-left{
+  left: calc(50% - 80px);
+}
+.l_intro_box, .r_intro_box{
+  height: 85%;
+}
+.hidden-title-l{
+  display: none;
+}
+/*.meta_text, .meta_text p{
+  font-family: 'Grot', Arial;
+  font-size: 46px;
+}*/
+.b_intro{
+  margin: 40px 0 0 0;
+}
+.m20{
+  margin: 0 0 54px 0;
+}
+.link_reg{
+  text-decoration: underline;
+  /*border-bottom: 3px solid #000;*/
+}
+.link_reg:hover{
+  text-decoration: none;
+}
+.link_irr{
+  display: block;
+}
+.link_irr:hover{
+  text-decoration: underline;
+}
+.info_extra_l, .info_extra_r{
+  display: inline-block;
+  display: none;
+}
+.info_extra{
+  display: inline-block;
+  display: none;
+}
+#info_extra_l_switch, .info_extra_r_switch{
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+/*  CONTENT  */
+
+
+.content_box{
+  margin: 0 0 100px 0;
+}
+.right_content{
+  height: 1000px;
+}
+.r_img{
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+
+/*  FONT  */
+
+@font-face {
+  font-family: 'Grot';
+  src: url('./fonts/classic.ttf')  format('truetype');
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+      font-size: 72px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+      font-size: 72px;
+    }
+}
